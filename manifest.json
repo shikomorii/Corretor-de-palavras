@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Corretor de Texto",
+    "version": "1.0",
+    "description": "Corrige palavras enquanto você digita.",
+    "permissions": ["activeTab", "scripting","<all_urls>"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["contentScript.js"]
+      }
+    ]
+  }
+  
